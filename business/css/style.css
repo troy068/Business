@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #0012db;
+    background-image: url(http://www.transparenttextures.com/patterns/bright-squares.png); 
+    margin: 0;
+    padding: 10;
+    color: ghostwhite;
+}
+.product{
+    margin-bottom: 20px;
+}
+#menue-sticky{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    /*background-image:url(images/background.png); 
+    background-size: cover;
+    background-position: center; */
+}
+
+.container{
+    padding: 10px 10%;
+    display: flex; 
+    flex-direction: column;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 350px;
+    transition: all .5s
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+nav ul li a{
+    color: darkgoldenrod;/*Can edit color of home,about me, portfolio,contact*/
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width: 0%;
+    height: 3px;
+    background-color: forestgreen; /*color of underline*/
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20px;
+    font size: 30px;
+}
+.header-text h1{
+    font-size:60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: darkgoldenrod;
+}
+.header-text h1 juicy{
+    font-size: 30px;
+    color: forestgreen;
+}
+/*about*/
+#about{
+    padding 80px;
+    color: ghostwhite;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    
+}
+.about-col-3 img{
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+}
+.sub-title{
+    margin-top: 30px;
+    font-size: 60px;
+    font-weight: 600;
+    color: darkgoldenrod;
+}
+.tab-titles{ 
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18 px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background-color: forestgreen;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10 px 0;
+}
+.tab-contents ul li span{
+    color: forestgreen;
+    font-size: 18px; 
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.golf{
+    color: forestgreen;
+}
+.photo{
+    width: 200px;
+    height: 400px;
+}
+.special-cover {
+    background-color:gold;
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.25) , rgba(255, 215, 0, 1));
+    position:absolute;
+    top:0;
+    font-family: Verdana;
+    width:100%;
+    height:100%;
+    left:100%;
+    transition: left .25s;
+
+}
+/*products*/
+#product{
+    padding 80px;
+    color: ghostwhite;
+    margin:5px 10px;
+}
+.text{
+    margin:10px 20px;
+}
+.offer{
+    display: flex;
+    font-size: 18px;
+    margin-top: 10px;
+    margin:10px 20px;
+}
+.ourmission{
+    font-size: 20px;
+    margin:10px 20px;
+    color: forestgreen;
+}
+
+.code{
+    margin:10px 20px;
+}
+.loanphoto{
+    width: 400px;
+    height: 400px;
+}
+
+.btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: forestgreen;  /* You can choose any color */
+    color: #fff;  /* Text color */
+    text-align: center;
+    border-radius: 4px;  /* Rounded corners */
+    font-weight: bold;  /* Makes the text bold */
+    text-decoration: none;  /* Removes the default link underline */
+    transition: background-color 0.3s ease;  /* Smooth transition effect when hovering */
+    position: relative;
+}
+
+/* Contact */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: deepskyblue;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: grey;
+    display: inline-block;
+    transition: transform0.5s;
+}
+.social-icons a:hover{
+    color:deepskyblue;
+    transform: translateY(-5px);
+}
+input [type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px o;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 400px;
+    height: 50px;
+    outline: none;
+    display: block;
+
+    border: solid 3px black;
+}
+
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+@keyframes scaleRook { 
+    0%, 100% { left: 0px; }    /* Start and end at the left */
+    50% { left: 600px; }       /* Move to the right at the midpoint */
+} 
+        
+#rook {
+    animation: scaleRook 3s infinite linear;
+}
+
+/*References*/
+
+
+/* Hover state */
+.btn:hover {
+    background-color: #228B22;  /* Slightly darker green for hover effect */
+}
+
+/* Active state (when the button is clicked) */
+.btn:active {
+    transform: scale(0.95);  /* Slightly reduces the size of the button when clicked */
+}
+.contatc-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: grey;
+    padding: 15px;
+    margin: 15px 0;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: black;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
